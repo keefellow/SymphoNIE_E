@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+   PESS Retreat
+  </title>
+<head>
+
+<body>
+<h1 id ="Title">PESS Retreat 15 Nov 2022</h1>
+
+<div class="grid-container" width="100%">
+
+  <div class="grid-item">Suggestion</div>
+  <div class="grid-item"><textarea id="text" rows="7" cols="15"></textarea></div>
+  <div class="grid-item"><input type="button" id = "button1" onclick="submit()" value="Share your idea!"></input></div> 
+
+</body>
+
+<style type="text/css">
+textarea {
+   font-size: 20pt;
+   font-family: "Helvetica Neue" 
+} 
+input {
+   font-size: 20pt;
+   font-family: "Helvetica Neue"
+} 
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  font-family: "Helvetica Neue" 
+}
+.grid-item {
+  font-size: 30px;
+  text-align: left;
+}
+
+h1{
+  font-family: "Helvetica Neue" 
+}
+
+html { 
+  height: 100%;
+  width: 100%; 
+}
+
+</style>
+
+<script>
+
+
+function submit(){
+
+  text = document.getElementById("text").value;
+
+  document.getElementById("text").value = "";
+  
+  var url="https://docs.google.com/forms/d/e/1FAIpQLSeIi5g0C_uYeqNfsjBp9_KHhrOQdbfb_cYauYR3TsjPUXiOAQ/formResponse?entry.357640655="+text;
+
+
+
+  fetch(url);
+}
+
+</script>
